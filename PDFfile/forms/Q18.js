@@ -4,16 +4,16 @@ var dd = {
   footer: {
     columns: [
       {
-        text: "ID_FORM_NO Updated: ID_DATE",
+        text: "\nID_FORM_NO Updated: ID_DATE",
         alignment: "left",
-        marginLeft: 10,
+        marginLeft: 25,
         fontSize: 8,
         bold: true,
       },
       {
-        text: "Copyright © 2012 Management Action Programs, Inc.  All rights reserved.",
+        text: "(Please keep a copy of this form)\nCopyright© 2012 Management Action Programs, Inc.  All rights reserved.",
         alignment: "right",
-        marginRight: 10,
+        marginRight: 25,
         fontSize: 8,
         bold: true,
       },
@@ -28,7 +28,7 @@ var dd = {
           [
             {
               image: "icon",
-              alignment: "center",
+              alignment: "left",
               width: 125,
             },
             {
@@ -52,6 +52,8 @@ var dd = {
       },
     },
     {
+      fontSize: 11,
+      bold: true,
       text: " ",
     },
     {
@@ -65,140 +67,126 @@ var dd = {
             {
               fillColor: "#092B58",
               color: "white",
-              text: "KEY PERSONNEL LIST",
+              text: "HOTEL RESERVATION",
             },
             {
-              alignment: "RIGHT",
-              text: "Q10a",
-              color: "#092B58"
+              alignment: "center",
+              text: "Q18",
+              color: "#092B58",
             },
           ],
         ],
       },
     },
     {
+      fontSize: 11,
+      bold: true,
       text: " ",
     },
     {
-      style: "table1",
-      layout: {
-        vLineWidth: function (i) {
-          return 0;
+      text: "Accomodations for ID_DATE\n ",
+      style: "header",
+    },
+    {
+      text: [
+        { text: "1. Room occupancy: ", style: "que" },
+        { text: "ID_OCCUPANCY", style: "answer" },
+      ],
+    },
+    {
+      text: [
+        {
+          text: "2. Will you arrive early and need a room on ID_PREV_DAY: ",
+          style: "que",
         },
-      },
-      table: {
-        widths: ["*", "*"],
-        headerRows: 1,
-        body: [
-          [
-            {
-              text: "Name",
-              style: "header_line",
-            },
-            {
-              text: "Email",
-              style: "header_line",
-            },
-          ],
-          [
-            { text: "1. ID_NAME1", style: "listitem" },
-            { text: "ID_EMAIL1", style: "listitem" },
-          ],
-          [
-            { text: "2. ID_NAME2", style: "listitem" },
-            { text: "ID_EMAIL2", style: "listitem" },
-          ],
-          [
-            { text: "3. ID_NAME3", style: "listitem" },
-            { text: "ID_EMAIL3", style: "listitem" },
-          ],
-          [
-            { text: "4. ID_NAME4", style: "listitem" },
-            { text: "ID_EMAIL4", style: "listitem" },
-          ],
-          [
-            { text: "5. ID_NAME5", style: "listitem" },
-            { text: "ID_EMAIL5", style: "listitem" },
-          ],
-          [
-            { text: "6. ID_NAME6", style: "listitem" },
-            { text: "ID_EMAIL6", style: "listitem" },
-          ],
-          [
-            { text: "7. ID_NAME7", style: "listitem" },
-            { text: "ID_EMAIL7", style: "listitem" },
-          ],
-          [
-            { text: "8. ID_NAME8", style: "listitem" },
-            { text: "ID_EMAIL8", style: "listitem" },
-          ],
-          [
-            { text: "9. ID_NAME9", style: "listitem" },
-            { text: "ID_EMAIL9", style: "listitem" },
-          ],
-          [
-            { text: "10. ID_NAME10", style: "listitem" },
-            { text: "ID_EMAIL10", style: "listitem" },
-          ],
-          [
-            { text: "11. ID_NAME11", style: "listitem" },
-            { text: "ID_EMAIL11", style: "listitem" },
-          ],
-          [
-            { text: "12. ID_NAME12", style: "listitem" },
-            { text: "ID_EMAIL12", style: "listitem" },
-          ],
-          [
-            { text: "13. ID_NAME13", style: "listitem" },
-            { text: "ID_EMAIL13", style: "listitem" },
-          ],
-          [
-            { text: "14. ID_NAME14", style: "listitem" },
-            { text: "ID_EMAIL14", style: "listitem" },
-          ],
-          [
-            { text: "15. ID_NAME15", style: "listitem" },
-            { text: "ID_EMAIL15", style: "listitem" },
-          ],
-          [
-            { text: "16. ID_NAME16", style: "listitem" },
-            { text: "ID_EMAIL16", style: "listitem" },
-          ],
-          [
-            { text: "17. ID_NAME17", style: "listitem" },
-            { text: "ID_EMAIL17", style: "listitem" },
-          ],
-          [
-            { text: "18. ID_NAME18", style: "listitem" },
-            { text: "ID_EMAIL18", style: "listitem" },
-          ],
-          [
-            { text: "19. ID_NAME19", style: "listitem" },
-            { text: "ID_EMAIL19", style: "listitem" },
-          ],
-          [
-            { text: "20. ID_NAME20", style: "listitem" },
-            { text: "ID_EMAIL20", style: "listitem" },
-          ],
-        ],
-      },
+        { text: "ID_PREV_DAY_ARRIVAL ", style: "answer" },
+        { text: "Arrival Time: ", style: "que" },
+        { text: "ID_TIME", style: "ans" },
+      ],
+    },
+    {
+      text: [
+        { text: "3. Do you plan to have a guest?: ", style: "que" },
+        { text: "ID_GUEST ", style: "answer" },
+        { text: "Guest Dinner: ", style: "que" },
+        { text: "ID_DAY_1: ", style: "que" },
+        { text: "ID_G_DINNER_2  ", style: "answer" },
+        { text: "ID_DAY_2: ", style: "que" },
+        { text: "ID_G_DINNER_2  ", style: "answer" },
+      ],
+    },
+    {
+      text: "4.Do you have any dietary restrictions?",
+      style: "que",
+    },
+    {
+      text: "ID_DIET_RESTRICTIONS",
+      style: "answer",
+      marginLeft: 20,
+    },
+    {
+      text: "5. Credit card information is required in order to reserve lodging and/or meals. Please complete the information below:",
+      style: "que",
+    },
+    {
+      text: [
+        { text: "Name on credit card: ", style: "que" },
+        { text: "ID_CC_NAME", style: "answer" },
+      ],
+      marginLeft: 20,
+    },
+    {
+      text: [
+        { text: "Credit card number and type: ", style: "que" },
+        { text: "ID_CC_NO_TYPE", style: "answer" },
+      ],
+      marginLeft: 20,
+    },
+    {
+      text: [
+        { text: "Credit card expiration date: ", style: "que" },
+        { text: "ID_CC_EXP_DATE", style: "answer" },
+      ],
+      marginLeft: 20,
+    },
+    {
+      text: "6.Your name and title as they appear on our records ",
+      style: "que",
+    },
+    {
+      text: "ID_NAME",
+      style: "answer",
+      marginLeft: 20,
+    },
+    {
+      text: "If you want your name or title to appear differently, please print them here",
+      style: "que",
+    },
+    {
+      text: "ID_UPDATED_NAME",
+      style: "answer",
+      marginLeft: 20,
     },
   ],
+
   styles: {
-    table1: {
-      margin: [0, 5, 0, 15],
-    },
     header_left: {
       alignment: "right",
     },
-    listitem: {
-      lineHeight: 1.2,
-    },
-    header_line: {
+    header: {
+      alignment: "center",
       bold: true,
-      color: "#FFFFFF",
-      fillColor: "#092B58",
-      align: "left",
+      fontSize: 18,
+      color: "#092B58"
+    },
+    answer: {
+      bold: true,
+      fontSize: 10,
+      lineHeight: 2,
+    },
+    que: {
+      fontSize: 10,
+      lineHeight: 2,
     },
   },
   images: {
